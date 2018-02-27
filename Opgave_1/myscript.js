@@ -1,15 +1,13 @@
-//hjerne ude afstand til at fange simpel data check venligst senere om hjerne.exe er blevet fundet
-document.addEventListener('DOMContentLoaded', function (event) {
-    function sammenlign(form) {
-
-        let answer = document.getElementById('answer');
-        if (tekst1 == tekst2) {
-            answer = 'de er ens'
-            return true
-        }
-        else {
-            answer = 'de er ikke ens'
-            return false
-        }
+function compare() {    
+    let answer = document.getElementById('answer');
+    let first = document.forms['form']['text1'].value;
+    let second = document.forms['form']['text2'].value;
+    if (first == second) {
+        answer.innerHTML = 'they are the same'
+        return true
     }
-});
+    else {
+        answer.innerHTML = 'they are not the same'
+        return false
+    }
+}
